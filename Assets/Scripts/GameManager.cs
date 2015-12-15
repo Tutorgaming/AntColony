@@ -74,14 +74,14 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void spawnNode(Vector3 position){
-		node = Instantiate (node,position,Quaternion.identity) as GameObject;
-		nodes.addNode (node);
+		GameObject newNode = Instantiate (node,position,Quaternion.identity) as GameObject;
+		nodes.addNode (newNode);
 		Debug.Log ("pikachu");
 
 	}
 
 	public void spawnAnt(){
-		Ant = Instantiate (Ant,Holes[0],Quaternion.identity) as GameObject;
+		GameObject newAnt = Instantiate (Ant,Holes[0],Quaternion.identity) as GameObject;
 		numberAnt++;
 		CancelInvoke ();
 	}
